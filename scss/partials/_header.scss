@@ -36,6 +36,7 @@ header {
     header {
         justify-content: space-between;
         width: 100vw;
+        overflow: hidden;
 
         .button-container {
             display: none;
@@ -56,6 +57,7 @@ header {
             justify-content: center;
             align-items: center;
             width: 100vw;
+            transition: all 0.3s ease;
 
             .menu-container {
                 background-color: white;
@@ -68,8 +70,6 @@ header {
                 padding: 12px 0;
                 border: none;
     
-                transition: all 0.3s ease;
-    
                 a {
                     font-size: 16px;
                     color: black;
@@ -81,11 +81,13 @@ header {
 
         .hidden {
             transform: translateX(100%);
+            transition: all 0.3s ease;
         }
 
         .burger-menu {
             position: relative;
             width: fit-content;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -96,14 +98,19 @@ header {
                 transition: all 0.3s ease;
                 width: 100%;
 
-                &.burger-btn {
-                    opacity: 1;
-                }
+                // &.burger-btn {
+                //     opacity: 1;
+                // }
 
                 &.close-btn {
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: -35%;
+                    left: 7%;
+                    width: 18px;
+                    height: 19px;
+                }
+
+                &.disappear {
                     opacity: 0;
                 }
             }

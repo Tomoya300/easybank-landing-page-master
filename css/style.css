@@ -32,6 +32,7 @@ header .burger-menu {
   header {
     justify-content: space-between;
     width: 100vw;
+    overflow: hidden;
   }
   header .button-container {
     display: none;
@@ -48,6 +49,7 @@ header .burger-menu {
     justify-content: center;
     align-items: center;
     width: 100vw;
+    transition: all 0.3s ease;
   }
   header .mobile-menu-box .menu-container {
     background-color: white;
@@ -59,7 +61,6 @@ header .burger-menu {
     gap: 0;
     padding: 12px 0;
     border: none;
-    transition: all 0.3s ease;
   }
   header .mobile-menu-box .menu-container a {
     font-size: 16px;
@@ -69,10 +70,12 @@ header .burger-menu {
   }
   header .hidden {
     transform: translateX(100%);
+    transition: all 0.3s ease;
   }
   header .burger-menu {
     position: relative;
     width: fit-content;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,13 +86,14 @@ header .burger-menu {
     transition: all 0.3s ease;
     width: 100%;
   }
-  header .burger-menu img.burger-btn {
-    opacity: 1;
-  }
   header .burger-menu img.close-btn {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -35%;
+    left: 7%;
+    width: 18px;
+    height: 19px;
+  }
+  header .burger-menu img.disappear {
     opacity: 0;
   }
 }
