@@ -1,0 +1,36 @@
+header {
+    position: relative;
+    z-index: 999;
+
+    .desktop-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+
+        .menu-container {
+            display: flex;
+            gap: 1.5rem;
+            height: 100%;
+
+            a {
+                text-decoration: none;
+                font-size: 13px;
+                color: hsl(233, 8%, 62%);
+                height: 100%;
+                padding: 1.67rem 0;
+                border-bottom: 4px solid white;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: black;
+                    border-bottom: 4px solid hsl(136, 65%, 51%);
+                }
+            }
+        }
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}

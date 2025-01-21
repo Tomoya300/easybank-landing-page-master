@@ -4,8 +4,52 @@
 
 * {
     box-sizing: border-box;
+    font-family: "Public Sans", serif;
 }
 
 body {
     margin: 0;
 }
+
+p {
+    line-height: 1.5;
+    color: hsl(233, 8%, 62%);
+}
+
+.button-container {
+    width: fit-content;
+
+    button {
+        padding: 0.8rem;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        width: 150px;
+        background: linear-gradient(130deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+// .horizontal-box {
+//     display: flex;
+//     gap: 1.5rem;
+
+//     .horizon-item {
+//         width: 20.2%;
+
+//         h4 {
+//             font-size: 20px;
+//             font-weight: 300;
+//         }
+
+//         p {
+//             font-size: 14px;
+//             line-height: 1.5;
+//         }
+//     }
+// }
