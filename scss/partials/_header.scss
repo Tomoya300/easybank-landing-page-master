@@ -1,36 +1,112 @@
 header {
     position: relative;
     z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
 
-    .desktop-header {
+    .menu-container {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: white;
+        gap: 1.5rem;
+        height: 100%;
 
-        .menu-container {
-            display: flex;
-            gap: 1.5rem;
+        a {
+            text-decoration: none;
+            font-size: 13px;
+            color: hsl(233, 8%, 62%);
             height: 100%;
+            padding: 1.67rem 0;
+            border-bottom: 4px solid white;
+            transition: all 0.3s ease;
 
-            a {
-                text-decoration: none;
-                font-size: 13px;
-                color: hsl(233, 8%, 62%);
-                height: 100%;
-                padding: 1.67rem 0;
-                border-bottom: 4px solid white;
-                transition: all 0.3s ease;
-
-                &:hover {
-                    color: black;
-                    border-bottom: 4px solid hsl(136, 65%, 51%);
-                }
+            &:hover {
+                color: black;
+                border-bottom: 4px solid hsl(136, 65%, 51%);
             }
         }
     }
 
-    .mobile-header {
+    .burger-menu {
         display: none;
+    }
+}
+
+@media screen and (max-width:769px) {
+    header {
+        justify-content: space-between;
+        width: 100vw;
+
+        .button-container {
+            display: none;
+        }
+
+        .logo-container {
+            img {
+                padding: 1.5rem;
+            }
+        }
+
+        .mobile-menu-box {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+
+            .menu-container {
+                background-color: white;
+                width: 87vw;
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+                padding: 12px 0;
+                border: none;
+    
+                transition: all 0.3s ease;
+    
+                a {
+                    font-size: 16px;
+                    color: black;
+                    width: fit-content;
+                    padding: 13px 0;
+                }
+            }
+        }
+
+        .hidden {
+            transform: translateX(100%);
+        }
+
+        .burger-menu {
+            position: relative;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 1.5rem;
+            transform: translateY(-2px);
+
+            img {
+                transition: all 0.3s ease;
+                width: 100%;
+
+                &.burger-btn {
+                    opacity: 1;
+                }
+
+                &.close-btn {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
+        }
     }
 }
