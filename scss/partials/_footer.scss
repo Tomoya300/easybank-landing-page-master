@@ -32,19 +32,15 @@ footer {
                 width: 100%;
 
                 svg {
-                    .hover-area {
-                        pointer-events: all;
+                    path {
+                        fill: #fff;
+                        transition: all 0.3s ease;
+                    }
 
-                        path {
-                            fill: #fff;
-                            transition: all 0.3s ease;
-
-                            &:hover {
-                                fill: hsl(192, 70%, 51%);
-                                transform: scale(1.1);
-                                transform-origin: center;
-                            }
-                        }
+                    &:hover path {
+                        fill: hsl(192, 70%, 51%);
+                        transform: scale(1.1);
+                        transform-origin: center;
                     }
                 }
             }

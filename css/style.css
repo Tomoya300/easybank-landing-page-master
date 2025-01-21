@@ -200,14 +200,11 @@ footer .footer-left .logo-links .socials {
   justify-content: space-between;
   width: 100%;
 }
-footer .footer-left .logo-links .socials svg .hover-area {
-  pointer-events: all;
-}
-footer .footer-left .logo-links .socials svg .hover-area path {
+footer .footer-left .logo-links .socials svg path {
   fill: #fff;
   transition: all 0.3s ease;
 }
-footer .footer-left .logo-links .socials svg .hover-area path:hover {
+footer .footer-left .logo-links .socials svg:hover path {
   fill: hsl(192, 70%, 51%);
   transform: scale(1.1);
   transform-origin: center;
