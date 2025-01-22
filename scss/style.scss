@@ -20,11 +20,11 @@ p {
     width: fit-content;
 
     button {
-        padding: 0.9rem;
+        padding: 0.75rem;
         border-radius: 30px;
         border: none;
         color: white;
-        width: 163px;
+        width: 145px;
         background: linear-gradient(130deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
         cursor: pointer;
         transition: all 0.3s ease;
@@ -35,21 +35,23 @@ p {
     }
 }
 
-// .horizontal-box {
-//     display: flex;
-//     gap: 1.5rem;
-
-//     .horizon-item {
-//         width: 20.2%;
-
-//         h4 {
-//             font-size: 20px;
-//             font-weight: 300;
-//         }
-
-//         p {
-//             font-size: 14px;
-//             line-height: 1.5;
-//         }
-//     }
-// }
+@media screen and (max-width:769px) {
+    .button-container {
+        width: fit-content;
+    
+        button {
+            padding: 0.9rem;
+            border-radius: 30px;
+            border: none;
+            color: white;
+            width: 163px;
+            background: linear-gradient(130deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+            cursor: pointer;
+            transition: all 0.3s ease;
+    
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

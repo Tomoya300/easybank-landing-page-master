@@ -5,14 +5,18 @@ header {
   width: 100vw;
   z-index: 999;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: white;
+}
+header .logo-container svg {
+  transform: translate(-28%, 6%) scale(0.9);
 }
 header .menu-container {
   display: flex;
   gap: 1.5rem;
   height: 100%;
+  padding-right: 22px;
 }
 header .menu-container a {
   text-decoration: none;
@@ -27,6 +31,9 @@ header .menu-container a:hover {
   color: black;
   border-bottom: 4px solid hsl(136, 65%, 51%);
 }
+header .button-container {
+  width: 10%;
+}
 header .burger-menu {
   display: none;
 }
@@ -36,12 +43,15 @@ header .burger-menu {
     justify-content: space-between;
     width: 100vw;
     overflow: hidden;
+    height: 63px;
   }
   header .button-container {
     display: none;
   }
-  header .logo-container img {
-    padding: 1.5rem;
+  header .logo-container svg {
+    padding-left: 1.5rem;
+    width: 100%;
+    transform: translate(0, 0) scale(1);
   }
   header .mobile-menu-box {
     position: fixed;
@@ -52,7 +62,7 @@ header .burger-menu {
     align-items: center;
     width: 100vw;
     transition: all 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
     height: 100vh;
     padding: 2rem;
   }
@@ -93,8 +103,9 @@ header .burger-menu {
   }
   header .burger-menu img.close-btn {
     position: absolute;
-    top: -35%;
+    top: 50%;
     left: 7%;
+    transform: translateY(-50%);
     width: 18px;
     height: 19px;
   }
@@ -247,6 +258,7 @@ main .articles-section .horizontal-box .article-card .article-desc .article-intr
   main .top-section {
     flex-direction: column;
     height: 100%;
+    margin-bottom: 5.3rem;
   }
   main .top-section .top-heading {
     width: 100%;
@@ -263,24 +275,32 @@ main .articles-section .horizontal-box .article-card .article-desc .article-intr
   main .top-section .bg-box {
     order: -1;
     width: 100%;
-    height: 46vh;
-    background-position: left top;
+    height: 82.4vw;
+    max-height: 400px;
+    background-position: 8% 60%;
     background-size: 100% auto;
   }
   main .top-section .mockup-image {
     position: absolute;
-    top: -27%;
-    left: 0;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
     overflow: hidden;
     z-index: 1;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
   }
   main .top-section .mockup-image img {
     width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    max-width: 375.33px;
+    max-height: 459.48px;
   }
   main .why-section {
-    padding: 7.5rem 1rem 2rem 1rem;
+    padding: 2.2rem 1rem 3.2rem 1rem;
   }
   main .why-section .heading {
     text-align: center;
@@ -315,7 +335,7 @@ main .articles-section .horizontal-box .article-card .article-desc .article-intr
     line-height: 1.6;
   }
   main .articles-section {
-    padding: 5rem 1.4rem;
+    padding: 3.8rem 1.4rem 6.2rem 1.4rem;
   }
   main .articles-section .heading h2 {
     text-align: center;
@@ -335,7 +355,7 @@ main .articles-section .horizontal-box .article-card .article-desc .article-intr
     margin: 0;
   }
   main .articles-section .horizontal-box .article-card .article-thumb img {
-    height: 200px;
+    height: 53.3vw;
   }
   main .articles-section .horizontal-box .article-card .article-desc {
     padding: 1.1rem 2rem;
@@ -392,7 +412,7 @@ footer .footer-left .logo-links .socials svg path {
   transition: all 0.3s ease;
 }
 footer .footer-left .logo-links .socials svg:hover path {
-  fill: hsl(192, 70%, 51%);
+  fill: hsl(136, 65%, 51%);
   transform: scale(1.1);
   transform-origin: center;
 }
@@ -448,7 +468,7 @@ footer .footer-right .copyright p {
     height: 100%;
     width: 100%;
     gap: 2rem;
-    padding-top: 2.8rem;
+    padding-top: 1.4rem;
   }
   footer .footer-left .logo-links .logo-box {
     width: 100%;
@@ -499,17 +519,36 @@ p {
   width: fit-content;
 }
 .button-container button {
-  padding: 0.9rem;
+  padding: 0.75rem;
   border-radius: 30px;
   border: none;
   color: white;
-  width: 163px;
+  width: 145px;
   background: linear-gradient(130deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button-container button:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 769px) {
+  .button-container {
+    width: fit-content;
+  }
+  .button-container button {
+    padding: 0.9rem;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    width: 163px;
+    background: linear-gradient(130deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button-container button:hover {
+    opacity: 0.7;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

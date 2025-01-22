@@ -178,6 +178,7 @@ main {
         .top-section {
             flex-direction: column;
             height: 100%;
+            margin-bottom: 5.3rem;
             .top-heading {
                 width: 100%;
                 padding: 8px 0 0 0;
@@ -196,28 +197,36 @@ main {
             .bg-box {
                 order: -1;
                 width: 100%;
-                height: 46vh;
-                background-position: left top;
+                height: 82.4vw;
+                max-height: 400px;
+                background-position: 8% 60%;
                 background-size: 100% auto;
             }
 
             .mockup-image {
                 position: absolute;
-                top: -27%;
-                left: 0;
+                top: -25%;
+                left: 50%;
+                transform: translateX(-50%);
                 overflow: hidden;
                 z-index: 1;
                 width: 100%;
                 height: 100%;
-    
+                display: flex;
+                justify-content: center;
+               
                 img {
                     width: 100%;
+                    height: 100%;
+                    transform: scale(0.9);
+                    max-width: 375.33px;
+                    max-height: 459.48px;
                 }
             }
         }
 
         .why-section {
-            padding: 7.5rem 1rem 2rem 1rem;
+            padding: 2.2rem 1rem 3.2rem 1rem;
 
             .heading {
                 text-align: center;
@@ -261,7 +270,8 @@ main {
         }
 
         .articles-section {
-            padding: 5rem 1.4rem;
+            padding: 3.8rem 1.4rem 6.2rem 1.4rem;
+
             .heading {
                 h2 {
                     text-align: center;
@@ -282,7 +292,7 @@ main {
                         padding: 0;
                         margin: 0;
                         img {
-                            height: 200px;
+                            height: 53.3vw;
                         }
                     }
 

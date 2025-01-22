@@ -12,7 +12,6 @@ footer {
         align-items: center;
         gap: 8rem;
 
-
         .logo-links {
             display: flex;
             flex-direction: column;
@@ -38,7 +37,7 @@ footer {
                     }
 
                     &:hover path {
-                        fill: hsl(192, 70%, 51%);
+                        fill: hsl(136, 65%, 51%);
                         transform: scale(1.1);
                         transform-origin: center;
                     }
@@ -107,7 +106,7 @@ footer {
                 height: 100%;
                 width: 100%;
                 gap: 2rem;
-                padding-top: 2.8rem;
+                padding-top: 1.4rem;
     
                 .logo-box {
                     width: 100%;
