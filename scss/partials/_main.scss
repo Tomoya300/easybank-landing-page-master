@@ -2,12 +2,13 @@ main {
     padding-top: 71.33px;
 
     .top-section {
-        height: 86vh;
+        height: 80vh;
         width: 100%;
         display: flex;
         align-items: center;
         flex: 1 1 50%;
         position: relative;
+        background-color: hsl(0, 0%, 98%);
 
         .top-heading {
             display: flex;
@@ -179,6 +180,7 @@ main {
             flex-direction: column;
             height: 100%;
             margin-bottom: 5.3rem;
+            
             .top-heading {
                 width: 100%;
                 padding: 8px 0 0 0;

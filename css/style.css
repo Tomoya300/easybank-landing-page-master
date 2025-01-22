@@ -117,12 +117,13 @@ main {
   padding-top: 71.33px;
 }
 main .top-section {
-  height: 86vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   align-items: center;
   flex: 1 1 50%;
   position: relative;
+  background-color: hsl(0, 0%, 98%);
 }
 main .top-section .top-heading {
   display: flex;
